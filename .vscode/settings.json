@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "budget-tracker1.sln"
+    "dotnet.defaultSolution": "budget-tracker1.sln",
+    "conventionalCommits.scopes": [
+        "ASP.NET Core"
+    ]
 }
