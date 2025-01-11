@@ -2,8 +2,8 @@
     "name": "budget-tracker",
     "version": "0.1.0",
     "scripts": {
-        "build:css": "tailwindcss -i src/assets/css/tailwind.css -o dist/css/styles.min.css",
-        "watch:css": "tailwindcss -i src/assets/css/tailwind.css -o dist/css/styles.min.css --watch"
+        "build:css": "tailwindcss -i src/assets/css/tailwind.css -o wwwroot/css/styles.min.css",
+        "watch:css": "tailwindcss -i src/assets/css/tailwind.css -o wwwroot/css/styles.min.css --watch"
     },
     "devDependencies": {
         "tailwindcss": "^3.0.0",
