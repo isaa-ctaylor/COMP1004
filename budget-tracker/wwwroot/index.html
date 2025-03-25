@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,unfold_more" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,delete,unfold_more" />
     <link rel="stylesheet" href="css/styles.min.css">
 
     <title></title>
@@ -32,7 +32,7 @@
                         </span>
                     </label>
                 </div>
-                <div id="income" class="flex flex-col">
+                <div id="income" class="flex flex-col overflow-scroll overflow-y-hidden">
                     <div class="flex h-12">
                         <div class="w-44"></div>
                     </div>
@@ -43,39 +43,39 @@
                                 <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Frequency</th>
                                 <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Amount</th>
                                 <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Date</th>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2"></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id="income-table-body">
+                            <tr id="income-template">
                                 <td class="border-2 border-gray-300 px-4 py-2">
-                                    <span>Salary</span>
+                                    <textarea class="w-full border-none outline-none text-wrap field-sizing-content" placeholder="Enter description..."></textarea></input>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2">
-                                    <span class="rounded-full bg-purple-300 px-3 py-1 text-sm whitespace-nowrap">Monthly<span class="material-symbols-outlined translate-x-1 translate-y-1 text-lg">unfold_more</span></span>
+                                    <div class="bg-gray-200 rounded-full max-w-fit px-3 py-1 text-sm whitespace-nowrap cursor-pointer">
+                                        <select name="frequency" id="frequency" class="bg-transparent cursor-pointer outline-none border-none">
+                                            <option value="" disabled selected hidden>Select frequency</option>
+                                            <option value="0">Daily</option>
+                                            <option value="1">Weekly</option>
+                                            <option value="2">Monthly</option>
+                                            <option value="3">Anually</option>
+                                            <option value="4">Once</option>
+                                        </select>
+                                    </div>
+                                    <!-- <span class="rounded-full bg-gray-200 px-3 py-1 text-sm whitespace-nowrap cursor-pointer">Choose frequency<span class="material-symbols-outlined translate-x-1 translate-y-1 text-lg">unfold_more</span></span> -->
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
-                                    <span><span>£</span><span>1000.00</span></span>
+                                    <span class="flex"><span>£</span><input type="text" class="w-full border-none outline-none text-right" placeholder="0.00"></span></span>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
-                                    <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><span class="material-symbols-outlined text-gray-500 -translate-x-1 translate-y-1">calendar_month</span>2024-01-01</span>
+                                    <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><input type="date" name="date" class="bg-transparent cursor-pointer outline-none border-none"></span>
+                                </td>
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
+                                    <span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1">delete</span>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="border-2 border-gray-300 px-4 py-2">
-                                    <span>Salary</span>
-                                </td>
-                                <td class="border-2 border-gray-300 px-4 py-2">
-                                    <span class="rounded-full bg-purple-300 px-3 py-1 text-sm whitespace-nowrap">Monthly<span class="material-symbols-outlined translate-x-1 translate-y-1 text-lg">unfold_more</span></span>
-                                </td>
-                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
-                                    <span><span>£</span><span>2500.00</span></span>
-                                </td>
-                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
-                                    <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><span class="material-symbols-outlined text-gray-500 -translate-x-1 translate-y-1">calendar_month</span>2024-01-01</span>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td class="border px-4 py-2">+ Add more</td>
+                            <tr id="add-income" class="cursor-pointer">
+                                <td class="border max-w-fit px-4 py-2" onclick="addIncome()">+ Add more</td>
                             </tr>
                         </tbody>
                     </table>
