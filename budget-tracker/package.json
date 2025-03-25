@@ -6,8 +6,11 @@
         "watch:css": "tailwindcss -i src/assets/css/tailwind.css -o wwwroot/css/styles.min.css --watch"
     },
     "devDependencies": {
-        "tailwindcss": "^3.0.0",
         "autoprefixer": "^10.0.0",
-        "postcss": "^8.0.0"
+        "postcss": "^8.0.0",
+        "tailwindcss": "^4.0.15"
+    },
+    "dependencies": {
+        "@tailwindcss/cli": "^4.0.15"
     }
 }
