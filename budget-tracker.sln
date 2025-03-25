@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "budget-tracker1", "budget-tracker1\budget-tracker1.csproj", "{2C7D2464-367D-41C0-91B7-8EAFB208144B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "budget-tracker", "budget-tracker\budget-tracker.csproj", "{2C7D2464-367D-41C0-91B7-8EAFB208144B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
