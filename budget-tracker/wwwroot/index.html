@@ -48,10 +48,10 @@
                         </thead>
                         <tbody id="income-table-body">
                             <tr id="income-template" class="hidden">
-                                <td class="border-2 border-gray-300 px-4 py-2">
+                                <td class="border-2 border-gray-300 px-4 py-2" data-name="description">
                                     <textarea class="w-full border-none outline-hidden text-wrap field-sizing-content resize-none" placeholder="Enter description..."></textarea></input>
                                 </td>
-                                <td class="border-2 border-gray-300 px-4 py-2">
+                                <td class="border-2 border-gray-300 px-4 py-2" data-name="frequency">
                                     <div class="bg-gray-200 rounded-full max-w-fit px-3 py-1 text-sm whitespace-nowrap cursor-pointer">
                                         <select name="frequency" id="frequency" class="bg-transparent cursor-pointer outline-hidden border-none">
                                             <option value="" disabled selected hidden>Select frequency</option>
@@ -63,10 +63,10 @@
                                         </select>
                                     </div>
                                 </td>
-                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
-                                    <span class="flex"><span>£</span><input type="text" class="w-full border-none outline-hidden text-right" placeholder="0.00"></span></span>
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="amount">
+                                    <span class="flex"><span>£</span><input type="number" class="w-full border-none outline-hidden text-right" placeholder="0.00"></span></span>
                                 </td>
-                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="date">
                                     <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><input type="date" name="date" class="bg-transparent cursor-pointer outline-hidden border-none"></span>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
