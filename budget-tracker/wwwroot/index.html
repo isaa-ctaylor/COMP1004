@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,delete,unfold_more" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,delete,unfold_more,upload" />
     <link rel="stylesheet" href="css/styles.min.css">
 
-    <title></title>
+    <title>Budget Tracker</title>
 </head>
 
 <body>
@@ -17,20 +17,24 @@
         <div id="content" class="w-full h-[90%] flex flex-col p-3 gap-3">
             <div id="analytics" class="h-1/2 w-full"></div>
             <div id="input" class="h-1/2 rounded-md p-3">
-                <div class="absolute flex">
+                <div class="absolute flex w-full">
                     <label class="flex justify-center">
                         <input type="radio" name="chip" value="income" class="hidden peer" checked>
                         <span class="px-3 py-1 rounded-full rounded-r-none border-[1px] border-gray-400 border-r-0 text-gray-700 peer-checked:bg-gray-300 transition cursor-pointer">
                             Income
                         </span>
                     </label>
-                    <div class="flex-1 w-[0.5px] bg-gray-400"></div>
-                    <label class="flex justify-center">
+                    <div class="w-[0.5px] bg-gray-400"></div>
+                    <label class="flex justify-center pr-3">
                         <input type="radio" name="chip" value="expenses" class="hidden peer">
                         <span class="px-3 py-1 rounded-full rounded-l-none border-[1px] border-gray-400 border-l-0 text-gray-700 peer-checked:bg-gray-300 transition cursor-pointer">
                             Expenses
                         </span>
                     </label>
+                    <div class="justify-center rounded-full border-gray-400 border-[1px] pl-2">
+                        <label for="file-input"><span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1">upload</span></label>
+                        <input class="hidden" type="file" name="file" id="file-input" onchange="handleFileUpload(this)">
+                    </div>
                 </div>
                 <div id="income" class="flex flex-col overflow-scroll overflow-y-hidden">
                     <div class="flex h-12">
