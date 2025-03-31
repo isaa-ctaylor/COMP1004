@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,delete,unfold_more,upload" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month,delete,download,unfold_more,upload" />
     <link rel="stylesheet" href="css/styles.min.css">
 
     <title>Budget Tracker</title>
@@ -31,9 +31,11 @@
                             Expenses
                         </span>
                     </label>
-                    <div class="justify-center rounded-full border-gray-400 border-[1px] pl-2">
+                    <div class="justify-center rounded-full border-gray-400 border-[1px] pl-2 flex">
                         <label for="file-input"><span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1">upload</span></label>
                         <input class="hidden" type="file" name="file" id="file-input" onchange="handleFileUpload(this)">
+                        <div class="w-[0.5px] bg-gray-400"></div>
+                        <div for="file-download" onclick="doDataDownload()"><span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1 pl-2">download</span></div>
                     </div>
                 </div>
                 <div id="income" class="flex flex-col overflow-scroll overflow-y-hidden">
@@ -53,7 +55,7 @@
                         <tbody id="income-table-body">
                             <tr class="template hidden">
                                 <td class="border-2 border-gray-300 px-4 py-2" data-name="description">
-                                    <textarea class="w-full border-none outline-hidden text-wrap field-sizing-content resize-none" placeholder="Enter description..."></textarea></input>
+                                    <span><textarea class="w-full border-none outline-hidden text-wrap field-sizing-content resize-none" placeholder="Enter description..."></textarea></span>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2" data-name="frequency">
                                     <div class="bg-gray-200 rounded-full max-w-fit px-3 py-1 text-sm whitespace-nowrap cursor-pointer">
@@ -68,7 +70,7 @@
                                     </div>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="amount">
-                                    <span class="flex"><span>£</span><input type="number" class="w-full border-none outline-hidden text-right" placeholder="0.00"></span></span>
+                                    <span class="flex">£<input type="number" class="w-full border-none outline-hidden text-right" placeholder="0.00"></span></span>
                                 </td>
                                 <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="date">
                                     <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><input type="date" name="date" class="bg-transparent cursor-pointer outline-hidden border-none"></span>
