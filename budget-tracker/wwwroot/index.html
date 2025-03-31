@@ -40,7 +40,7 @@
                     <div class="flex h-12">
                         <div class="w-44"></div>
                     </div>
-                    <table id="income-table" class="table-auto text-left mb-3">
+                    <table id="income-table" class="input-table table-auto text-left mb-3">
                         <thead>
                             <tr>
                                 <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Description</th>
@@ -51,7 +51,7 @@
                             </tr>
                         </thead>
                         <tbody id="income-table-body">
-                            <tr id="income-template" class="hidden">
+                            <tr class="template hidden">
                                 <td class="border-2 border-gray-300 px-4 py-2" data-name="description">
                                     <textarea class="w-full border-none outline-hidden text-wrap field-sizing-content resize-none" placeholder="Enter description..."></textarea></input>
                                 </td>
@@ -77,16 +77,58 @@
                                     <span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1" onclick="removeIncome(this.parentNode)">delete</span>
                                 </td>
                             </tr>
-                            <tr id="add-income" class="cursor-pointer">
-                                <td role="button" class="border max-w-fit px-4 py-2" onclick="addIncome()">+ Add more</td>
+                            <tr class="add-row cursor-pointer">
+                                <td role="button" class="border max-w-fit px-4 py-2" onclick="addTableRow(this)">+ Add more</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div id="expenses" class="flex flex-col hidden">
-                    <div class="flex">
+                <div id="expenses" class="flex flex-col overflow-scroll overflow-y-hidden hidden">
+                    <div class="flex h-12">
                         <div class="w-44"></div>
                     </div>
+                    <table id="expenses-table" class="input-table table-auto text-left mb-3">
+                        <thead>
+                            <tr>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Description</th>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Frequency</th>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Amount</th>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2">Date</th>
+                                <th class="border-2 border-gray-300 bg-gray-200 px-4 py-2"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenses-table-body">
+                            <tr class="template hidden">
+                                <td class="border-2 border-gray-300 px-4 py-2" data-name="description">
+                                    <textarea class="w-full border-none outline-hidden text-wrap field-sizing-content resize-none" placeholder="Enter description..."></textarea></input>
+                                </td>
+                                <td class="border-2 border-gray-300 px-4 py-2" data-name="frequency">
+                                    <div class="bg-gray-200 rounded-full max-w-fit px-3 py-1 text-sm whitespace-nowrap cursor-pointer">
+                                        <select name="frequency" id="frequency" class="bg-transparent cursor-pointer outline-hidden border-none">
+                                            <option value="" disabled selected hidden>Select frequency</option>
+                                            <option value="0">Daily</option>
+                                            <option value="1">Weekly</option>
+                                            <option value="2">Monthly</option>
+                                            <option value="3">Anually</option>
+                                            <option value="4">Once</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="amount">
+                                    <span class="flex"><span>£</span><input type="number" class="w-full border-none outline-hidden text-right" placeholder="0.00"></span></span>
+                                </td>
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit" data-name="date">
+                                    <span class="text-nowrap rounded-full bg-gray-200 px-3 py-1"><input type="date" name="date" class="bg-transparent cursor-pointer outline-hidden border-none"></span>
+                                </td>
+                                <td class="border-2 border-gray-300 px-4 py-2 text-right w-0 min-w-fit">
+                                    <span class="material-symbols-outlined text-gray-500 cursor-pointer -translate-x-1 translate-y-1" onclick="removeIncome(this.parentNode)">delete</span>
+                                </td>
+                            </tr>
+                            <tr  class="add-row cursor-pointer">
+                                <td role="button" class="border max-w-fit px-4 py-2" onclick="addTableRow(this)">+ Add more</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
