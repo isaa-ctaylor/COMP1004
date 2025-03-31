@@ -16,4 +16,9 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  .error {
+    @apply bg-red-200;
+  }
 }
+
